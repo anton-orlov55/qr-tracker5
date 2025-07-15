@@ -1,26 +1,17 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Переадресация...</title>
-    <script>
-        // Записываем факт перехода в visitors.txt (простой способ)
-        fetch('https://api.github.com/repos/ВАШ_ЛОГИН/qr-tracker/contents/visitors.txt', {
-            method: 'PUT',
-            headers: {
-                'Authorization': 'token ВАШ_ТОКЕН',
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                "message": "Новый переход",
-                "content": btoa("Новый посетитель: " + new Date() + "\n")
-            })
-        }).then(() => {
-            // Перенаправляем на нужный сайт
-            window.location.href = "https://ВАШ_САЙТ.com";
-        });
-    </script>
-</head>
-<body>
-    <p>Идёт переадресация...</p>
-</body>
-</html>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();
+   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(103345518, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/103345518" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
